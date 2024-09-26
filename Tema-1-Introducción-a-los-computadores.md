@@ -1,7 +1,7 @@
 # Componentes hardware de un computador
 * CPU: Unidad Central de Proceso  
-* RAM: Random Access Memory
-* SSD
+* RAM
+* SSD: Solid stage disk
 * Chip 
 * Circuito integrado
 * ...
