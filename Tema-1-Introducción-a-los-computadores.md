@@ -1,5 +1,5 @@
 # Componentes hardware de un computador
-* CPU
+* CPU: 
 * RAM
 * SSD
 * Chip 
