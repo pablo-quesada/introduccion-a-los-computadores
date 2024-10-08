@@ -59,7 +59,7 @@ Un **chip empaquetado** es un die que ha sido encapsulado en un paquete protecto
 # Sistemas operativos
 
 ### Sistema operativo
-El **sistema operativo** es el principal programa que se ejecuta en toda computadora
+El **sistema operativo** es el programa principal que se ejecuta en una computadora. Es responsable de administrar los recursos del sistema, como la memoria, el procesador y los dispositivos de entrada/salida. Además, proporciona una interfaz para que los usuarios interactúen con la computadora y ejecuten aplicaciones.
 
 ### Funciones y objetivos del sistema operativo
 
@@ -84,25 +84,25 @@ La **Red de ára local** es una red diseñada para transportar datos en un área
 # Arquitectura de computadores
 
 ### Ley de Moore
-La **Ley de Moore** es el nombre que recive el incremento de transistores en un circuito integrado a lo largo del tiempo
+La **Ley de Moore** es una observación empírica que indica que el número de transistores en un circuito integrado tiende a duplicarse aproximadamente cada dos años. Esta tendencia ha impulsado el avance tecnológico en la industria de los computadores durante décadas.
 
 ### Paralelismo
-El **paralelismo** consiste en diseñar una aplicación que realice en distintos procesadores o nodos sus porciones con la finalidad de agilizar el proceso.
+El **paralelismo** es una técnica que consiste en diseñar una aplicación para que realice diferentes tareas en paralelo, utilizando múltiples procesadores o nodos. Esto permite acelerar el proceso y mejorar la eficiencia del sistema.
 
 ### Pipelining
-El **pipelining** es una técnica de implementación que consiste en solapar la ejecución de múltiples instrucciones.
+El **pipelining** es una técnica de implementación que consiste en solapar la ejecución de múltiples instrucciones. Esta técnica divide el proceso de ejecución de una instrucción en varias etapas, permitiendo que múltiples instrucciones se ejecuten simultáneamente en diferentes etapas del pipeline. Esto mejora el rendimiento del procesador al aprovechar mejor los recursos y reducir el tiempo de ejecución de las instrucciones.
 
 ### Predicción
-Método de resolver los riesgos de saltos que supone un determinado resultado para el salto y procede a partir de esa suposición, en lugar de esperar a que se estableza el resultado real.
+La **predicción** consiste en suponer un resultado para un salto antes de que se establezca el resultado real. Este enfoque permite proceder a partir de esa suposición en lugar de esperar a que se establezca el resultado real. 
 
 ### Jerarquía de memoria
-La **jerarquía de memoria** es una estructura que utiliza barios niveles de memoria, a medida que aumenta la distancia desde la CPU, el tamaño de las memorias y el tiempo aumentan.
+La **jerarquía de memoria** es una estructura que utiliza varios niveles de memoria. A medida que nos alejamos de la CPU, el tamaño de las memorias y el tiempo de acceso aumentan. En la parte superior de la jerarquía se encuentra la memoria caché, que es pequeña pero muy rápida. A continuación, se encuentra la memoria principal (RAM), que es más grande pero más lenta. Por último, en la parte inferior de la jerarquía, se encuentra la memoria secundaria (como los discos duros), que tiene una capacidad mucho mayor pero es aún más lenta. Esta jerarquía permite optimizar el rendimiento del sistema al almacenar los datos más utilizados en las memorias más rápidas y acceder a los datos menos utilizados en las memorias más lentas.
 
 ### Hacer el caso común más rápido
-Dado que la ley de Andahl nos dice que la oportunidad para conseguir una mejora se ve afectada por el tiempo que este suceso consume **hacer más rápido el caso más frecuente** significará una mejora más optimizada que si se mejorase un proceso poco frecuente.
+Dado que la ley de Andahl nos dice que la oportunidad para conseguir una mejora se ve afectada por el tiempo que este suceso consume, es más beneficioso enfocarse en hacer más rápido el caso más frecuente. Al optimizar el rendimiento del caso más común, se logra una mejora más significativa y eficiente en comparación con mejorar un proceso poco frecuente.
 
 ### Usar abstracción para simplificar el diseño
 La **abstracción** es un modelo que oculta temporalmente los detalles de menor nivel de los sistenas de computadores para facilitar el diseño de sistemas sofisticados.
 
 ### Confiabilidad a través de la redundancia
-La **redundancia** consiste en la implementación de un número muy elevado de componentes pequeños en lugar de un número menor de los mismos de mayor tamaño para disminuír las posibilidades de que estos tengan errores.
+La **redundancia** consiste en la implementación de un número muy elevado de componentes pequeños en lugar de un número menor de los mismos de mayor tamaño para disminuir las posibilidades de que estos tengan errores. Al tener múltiples componentes realizando la misma función, si uno de ellos falla, los demás pueden tomar su lugar y mantener el funcionamiento del sistema. Esto aumenta la confiabilidad y la disponibilidad del sistema, aunque también puede aumentar los costos y la complejidad del diseño.
