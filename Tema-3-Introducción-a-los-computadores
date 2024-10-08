@@ -1,0 +1,19 @@
+# Procesadores y procesos
+
+### Proceso
+
+### Tiempo de respuesta
+El **tiempo de respuesta** es el tiempo necesario para completar un proceso p incluyendo el tiempo inactivo en la cola de procesos 
+
+### Tiempo en respuesta
+El **tiempo en respuesta** es la fracción del tiempo de respuesta durante el cual p pudo ejecutarse
+
+### Tiempo en penalización
+El **tiempo en penalización** es la proporción del tiempo de respuesta en relación con el tiempo de uso del procesador
+
+### Tiempo en espera
+El **Tiempo en espera** es el tiempo que el proceso está en estado listo esperando tiempo de CPU
+
+### Cambio de contexto
+El **cambio de contexto** es el proceso mediante el cual el sistema operativo guarda el estado de un proceso en ejecución y carga el estado de otro proceso para que pueda ejecutarse en la CPU.
+
