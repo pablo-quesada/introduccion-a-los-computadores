@@ -6,7 +6,7 @@
 La **GPU (graphics processing unit/Unidad de procesamiento gráfico)** es un tipo de procesador mucho mas potente y específico que se encarga del procesamiento gráfico con el fin de mejorar el rendimiento y aliviar la carga de la CPU.
 
 # 3. SoC
-El **SoC (system on chip/Sistema en un chip)** alberga distintos componentes dentro de un mismo chip, ya sea cpu, gpu... con el fin de agrupar y realizar todas las funciones de un sistema completo en un mismo chip, comunmente usado en móviles y dispositivos de tamaño reducido.
+El **SoC (system on chip/Sistema en un chip)** alberga distintos componentes dentro de un mismo chip, ya sea cpu, gpu... con el fin de agrupar y realizar todas las funciones de un sistema completo en un mismo chip, comunmente usado en móviles y dispositivos de tamaño reducido. Ver también [Tema-1 SoC: System on a Chip](Tema-1-Introducción-a-los-computadores)
 
 # 4. FPGA
 El **FPGA (Field Programmable Gate Array/ Matriz de puertas lógicas programables en campo)** es un circuito integrado equipado con bloques lógicos configurables que se puede reprogramar después de haber sido fabricado.
