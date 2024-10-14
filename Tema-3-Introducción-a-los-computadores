@@ -16,4 +16,3 @@ El **Tiempo en espera** es el tiempo que el proceso está en estado listo espera
 
 ### Cambio de contexto
 El **cambio de contexto** es el proceso mediante el cual el sistema operativo guarda el estado de un proceso en ejecución y carga el estado de otro proceso para que pueda ejecutarse en la CPU.
-
