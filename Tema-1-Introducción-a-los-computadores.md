@@ -30,7 +30,7 @@ La **válvula de vacío** es un tubo de vidrio hueco entre 5 y 10 cm de longitud
 Los **transistores** son dispositivos electrónicos semiconductores que actúan como interruptores o amplificadores de señales eléctricas. Son los componentes fundamentales en la construcción de circuitos integrados y procesadores, permitiendo el control del flujo de corriente en los chips.
 
 ### Obleas (Blank Wafers y Pattern Wafers)
-La **oblea (wafer)** es una fina lámina circular de material semiconductor, generalmente silicio, utilizadas como base para la fabricación de chips. 
+La **oblea (wafer)** es una fina lámina circular de material semiconductor, generalmente silicio, de grosor no mayor que 0,25cm, utilizadas como base para la fabricación de chips. 
 - **Blank wafers** son obleas sin ningún patrón, listas para el proceso de fabricación.
 - **Pattern wafers** son obleas que ya han pasado por procesos de fotolitografía y tienen los patrones de circuitos necesarios para crear chips.
 
@@ -43,30 +43,35 @@ Un **chip empaquetado** es un die que ha sido encapsulado en un paquete protecto
 # Lenguaje de alto nivel y lenguaje máquina
 
 ### Código binario
+El **código binario** es un lenguaje de programación fornado por unos y ceros. Estos unos y ceros representan también las señales eléctricas de "on" y "off" respectivamente 
 
 ### Palabras
+Una **palabra** es una unidad natural de acceso en un computador, normalmente un grupo de 32 bits, que se corresponde al tamaño de un registro en la arquitectura MIPS, que es una arquitectura de conjunto de instrucciones ISA.
 
 ### Repertorio de instrucciones
+El **repertorio de instrucciones** es el conjunto de palabras que contienen las instrucciones en forma de bits.
 
 # Almacenamiento de datos e instrucciones
 
 ### Registros de procesador
+Los **registros** son un número limitado de posiciones especiales en las que se sitúan las instrucciones aritméticas.
 
 ### Memoria caché
+La **memoria caché** es una memoria rápida y pequeña que actúa como un *búfer*(espacio de memoria en el que se almacenan datos de manera temporal) para otra memoria mayor y más lenta.
+
+## Memoria principal
+La **memoria principal** es la memoria volátil (que solo guarda los datos cuando está recibiendo señal eléctrica) que se usa para almacenar los programas cuando se están ejecutando; típicamente se compone de DRAM (memoria construida como un circuito integrado, que provee acceso aleatorio a cualquier posición) en los computadores actuales
 
 ### Memoria secundaria
+La **memoria secundaria** es una memoria no volátil (forma de memoria que guarda los datos incluso en ausencia de alimentación eléctrica y que se usa para almacenar los programas entre ejecuciones) usada para almacenar los programas y datos entre ejecuciones; típicamente se compone de disicos magnéticos en los computadores actuales.
 
 # Sistemas operativos
 
 ### Sistema operativo
 El **sistema operativo** es el programa principal que se ejecuta en una computadora. Es responsable de administrar los recursos del sistema, como la memoria, el procesador y los dispositivos de entrada/salida. Además, proporciona una interfaz para que los usuarios interactúen con la computadora y ejecuten aplicaciones.
 
-### Funciones y objetivos del sistema operativo
-
-
-### Características de los sistemas operativos
-
 ### Rol del sistema operativo 
+Algunos de los **roles del sistema operativo** son la gestión de recursos externos e internos, la gestión de la memoria principal y del almacenamiento secundario, así como del tiempo de CPU en la multitarea, la ejecución de las máquinas virtuales y la protección y gestión de errores.
 
 # Comunicación entre computadores
 
