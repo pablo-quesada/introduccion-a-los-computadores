@@ -1,9 +1,64 @@
 # Procesadores y procesos
 
 ### Proceso
+Un **proceso** es una instancia de un programa en ejecución que tiene su propio espacio de memoria y recursos asignados. Se ejecutan de manera aislada inos de otros, dando la impresión de que son los únicos que utilizan el hardware, aunque en realidad comparten el tiempo y los recursos del sistema con otros procesos.
+
+Estos incluyen tanto actividades del sistema (kernel) como actividades de los usuarios (programas), que compiten por los recursos del sistema. Son una abstracción que permite realizar operaciones de manera pseudo concurrente, haciendo que un procesador con una sola CPU funcione como si tuviera múltiples CPUs virtuales.
+
+### Jerarquía de procesos
+En algunos sistemas operativos como Linux, los **procesos** se organizan en una **jerarquía**. Existen procesos creadores (padres) a los que se les vinculan nuevos procesos (hijos), que pueden generar nuevos procesos creando una estructura en forma de árbol.
+
+#### init
+El proceso **init** es el primer proceso en crearse, se encarga de preparar y coordinar el inicio del sistema operativo. El objetivo es iniciar todos los componentes y servicios necesarios para que el sistema funcione correctamente.
+
+#### getty
+El proceso **getty** es creado por init para que los usuarios puedan iniciar sesión y acceder al sistema.
+
+#### sshd
+El servicio **sshd** permite a los usuarios conectarse al sistema de manera remota.
+
+#### bash
+El proceso **bash** es creado por getty para gestionar las sesiones de los usuarios que entran en el sistema.
+
+### Limitados por cálculo o CPU
+Los procesos **limitados por cálculo o CPU** son los que invierten mayor parte del tiempo haciendo cálculos.
+
+### Limitados por E/S o limitados por memoria
+Los procesos **limitados por E/S o limitados por memoria** son aquellos que invierten la mayor parte del tiempo esperando por E/S.
+
+### Estados de un proceso
+Un proceso puede estar en ejecución (running on the CPU), listo/preparado (runnable process) o bloqueado/suspendido (suspended process)
+
+### Transiciones de un proceso
+
+#### Gestionados por el planificador a medio plazo (scheduler)
+
+##### En ejecución > Entrada no disponible > Bloqueado
+
+##### Bloqueado > Entrada disponible > Desbloquear > Listo
+
+#### Gestionados por el planificador a corto plazo (dispatcher)
+
+##### En ejecución > Quantum *runout* > Listo/Preparado
+
+##### Listo/Preparado > Asignar CPU > En ejecución
+
+### Planificación del proceso
+
+#### Interrupciones
+Las **interrupciones** son un mecanismo para recuperar el control de la CPU y atender otras solicitudes (procesos)-
+
+#### Temporizador
+Un **temporizador** es un mecanismo que genera interrupciones a intervalos regulares. Permite gestionar el tiempo y la ejecución de procesos.
+
+#### Ticks
+Los **ticks** son una fracción de tiempo durante la cual se puede usar la CPU sin interrupción. Su tiempo está determinada por una señal emitida por un temporizador. En Linux, un tick dura un milisegundo y en Windows entre 10 y 15 milisegundos
+
+#### Quantum
+El **quantum** es el tiempo mínimo que se permitirá a un proceso el uso de la CPU. Puede durar entre 10 y 200 ticks en Linux y entre 2 y 12 ticks en Windows (entre 20 y 180 milisegundos) dependiendo del tipo de proceso.
 
 ### Tiempo de respuesta
-El **tiempo de respuesta** es el tiempo necesario para completar un proceso p incluyendo el tiempo inactivo en la cola de procesos.
+El **tiempo de respuesta** es el tiempo necesario para completar un proceso p incluyendo el tiempo inactivo en la cola de procesos. Para obtenerlo se parte del momento en el que el proceso llegó a la cola, no el punto de inicio de la línea de tiempo.
 
 ### Tiempo en respuesta
 El **tiempo en respuesta** es la fracción del tiempo de respuesta durante el cual p pudo ejecutarse.
