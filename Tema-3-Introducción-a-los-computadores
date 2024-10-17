@@ -71,3 +71,26 @@ El **Tiempo en espera** es el tiempo que el proceso está en estado listo espera
 
 ### Cambio de contexto
 El **cambio de contexto** es el proceso mediante el cual el sistema operativo guarda el estado de un proceso en ejecución y carga el estado de otro proceso para que pueda ejecutarse en la CPU.
+
+# Procesamiento por lotes
+
+### Primero en entrar, primero en ser atendido
+Un esquema **FCFS** reduce al mínimo la sobrecarga administrativa (que incluye, tanto al tiempo requerido por el planificador
+para seleccionar al siguiente proceso, como el tiempo requerido para el cambio de contexto), el rendimiento percibido por los
+últimos procesos en llegar (o por procesos cortos llegados en un momento inconveniente) puede resultar inaceptable. Mantiene al mínimo la posible sobrecarga del sistema operativo mejorando el rendimiento global.
+
+### Turno circular (Round-Robin)
+
+#### Q = 1 Tick
+Si un proceso no ha terminado al final de su quantum, será interrumpido y puesto al final de la lista de procesos listos, para
+que espere a su turno nuevamente.
+
+#### Q = 4 Ticks 
+Conforme se incrementa q, el turno circular tiende a convertirse en FCFS — si cada quantum es arbitrariamente grande, todo proceso terminará su ejecución dentro de su quantum.
+Si bien aumentar el quantum mejora los tiempos promedio de respuesta, aumentarlo hasta convertirlo en un FCFS efectivo
+degenera en una penalización a los procesos cortos.
+
+### Bloque de Control de Proceso 
+En Linux, el **Process Control Block (PCB)** es una estructura que se almacena en el núcleo de sistema (kernel) con la información
+necesaria para gestionar un proceso, como el estado, PID, UID, ….
+Los datos que almacena el PCB son Estado de los registros de la CPU, identificador del propietario (UID), nombre y número de proceso (PID), privilegios de ejecución, estado actual (en ejecución / listo o preparado / bloqueado o suspendido), tiempo de CPU y tiempo transcurrido, uso de recursos, límite de recursos onivel de prioridad estática y nivel de prioridad dinámica
