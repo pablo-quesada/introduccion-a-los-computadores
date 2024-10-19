@@ -1,6 +1,6 @@
 # TIPOS DE POCESADORES
 
-### 1.CPU(ya definida)
+### 1.CPU
 La **CPU (Central Processing Unit)** es el cerebro de la computadora, responsable de ejecutar instrucciones y procesar datos. 
 
 ### 2.GPU
