@@ -24,7 +24,7 @@ EL **ACAP (Adaptative Computing Accelerator Platform/ )** Unidad de procesamient
 # Conjuntos de Instrucciones
 
 ### ISA
-La **ISA (Industry Standard Architecture)** es un modelo de arquitectura de 8 bit, es un bus de datos para computadoras ampliamente estendido, data del 1980.
+La **ISA (Industry Set Architecture)** es una interfaz abstracta entre el hardware y el nivel más bajo del software que incluye toda la información necesaria para escribir un programa en lenguake máquina que se ejecutará correctamente, e incluye las instrucciones, los registros, el acceso a la memoria, la E/S, etc.
 
 ### CISC
 EL **CISC (Complex Instruction Set Computer)** se trata de una ISA con muchas instrucciones de distinto tamaño y formato, se puede acceder a la memoria desde cualquiera instrucción.
