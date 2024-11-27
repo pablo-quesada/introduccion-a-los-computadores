@@ -43,5 +43,6 @@ Para calcular el complemento a dos de un número binario:
 2. Sumar `1` al bit menos significativo del resultado.
 
 Este sistema es ampliamente utilizado en la mayoría de los sistemas modernos debido a su eficiencia para operaciones aritméticas.
+
 ### Operación de suma
 En la **operación de suma** la aritmética se realiza bit a bit con un posible acarreo del cálculo de bits adyacentes menos significativos.
