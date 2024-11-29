@@ -107,19 +107,19 @@ El **contador de programas** (PC) es el registro que contiene la dirección de l
 ### Modos de direccionamiento
 
 #### Direccionamiento inmediato
-El **direccionamiento inmediato** se produce cuando el operando es una constante que aparece en la misma instrucción. (Tipo R con constante)
+El **direccionamiento inmediato** se produce cuando el operando es una constante que aparece en la misma instrucción. (Tipo R con constante).
 
 #### Direccionamiento a registro
-El **direccionamiento a registro** se produce cuando el operando está en un registro. (Tipo R con variables)
+El **direccionamiento a registro** se produce cuando el operando está en un registro. (Tipo R con variables).
 
 #### Direccionamiento base o desplazamiento
-El **direccionamiento base o desplazamiento** se produce cuando el operando está en la posición de memoria cuya dirección es la suma de un registro y de una constante en la instrucción. (Tipo I)
+El **direccionamiento base o desplazamiento** se produce cuando el operando está en la posición de memoria cuya dirección es la suma de un registro y de una constante en la instrucción. (Tipo I).
 
 #### Direccionamiento relativo al PC
-El **direccionamiento relativo al PC** se produce cuando la dirección es la suma del PC y de una constante en la instrucción. (Tipo J condicional)
+El **direccionamiento relativo al PC** se produce cuando la dirección es la suma del PC y de una constante en la instrucción. (Tipo J condicional).
 
 #### Direccionamiento pseudodirecto
-El **direccionamiento pseudodirecto** se produce cuando la dirección de salto es los 26 bits de la instrucción concatenados con los bits de mayor peso del PC. (Tipo J incondicional)
+El **direccionamiento pseudodirecto** se produce cuando la dirección de salto es los 26 bits de la instrucción concatenados con los bits de mayor peso del PC. (Tipo J incondicional).
 
 ### Text-segment
 El **text-segment** (segmento de texto) contiene el código máquina de un programa.
