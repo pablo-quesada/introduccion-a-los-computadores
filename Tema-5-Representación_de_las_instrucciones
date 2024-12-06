@@ -22,7 +22,7 @@ La **dirección** es valor usado para señalar la posición de un elemento de da
 La **restricción de alineamiento** es el requisito de que los datos se alineen en memoria en límites naturales. En la arquitectura MIPS las direcciones deben ser múltiplos de 4.
 
 ### Array
-Los **arrays** son estructuras de datos más complejas que las variables simples. (Similares a las listas en python, pero cuando se llama a una posición de memoria en un array se debe recordar que por la restricción de alineamiento son múltiplos de 4, siendo la primera el 0 y la segunda 4.)
+Los **arrays** son estructuras de datos más complejas que las variables simples. (Similares a las listas en python, pero cuando se llama a una posición de memoria en un array se debe recordar que por la restricción de alineamiento son múltiplos de 4, siendo la primera el 0 y la segunda 4).
 
 ### Big Endian
 Opción en la numeración de una palabra en la que el byte más a la derecha es el primero en la palabra.
