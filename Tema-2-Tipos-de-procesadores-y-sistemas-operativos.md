@@ -10,14 +10,13 @@ La **GPU (graphics processing unit/Unidad de procesamiento gráfico)** es un tip
 El **SoC (system on chip/Sistema en un chip)** alberga distintos componentes dentro de un mismo chip, ya sea CPU, GPU, etc., con el fin de agrupar y realizar todas las funciones de un sistema completo en un mismo chip, comúnmente usado en móviles y dispositivos de tamaño reducido. Un ejemplo de SoC es el Apple A14 Bionic, que se utiliza en dispositivos como el iPhone 12 y el iPad Air (4ª generación). Ver también [Tema-1 SoC: System on a Chip](Tema-1-Introducción-a-los-computadores)
 
 ### 4. FPGA
-El **FPGA (Field Programmable Gate Array/ Matriz de puertas lógicas programables en campo)** es un circuito integrado equipado con bloques lógicos configurables que se puede reprogramar después de haber sido fabricado. Un ejemplo de FPGA es el Xilinx Virtex-7, que se utiliza en aplicaciones como procesamiento de señales, telecomunicaciones y sistemas de control industrial.
+El **FPGA (Field Programmable Gate Array/Matriz de Puertas Lógicas Programables en Campo)** es un circuito integrado que contiene bloques lógicos configurables y una red de interconexión programable, lo que permite su reconfiguración incluso después de haber sido fabricado. Esta flexibilidad lo hace ideal para una amplia gama de aplicaciones, desde prototipos de hardware hasta sistemas de producción. Un ejemplo destacado de FPGA es el Xilinx Virtex-7, utilizado en áreas como el procesamiento de señales digitales, telecomunicaciones, sistemas de control industrial y aceleración de algoritmos en inteligencia artificial. Los FPGAs son especialmente valiosos en entornos donde se requiere alta personalización y rendimiento en tiempo real.
 
-### 5.ASIC
-El **ASIC (Circuito Integrado de Aplicación Específica)** es un circuito integrado como el FPGA pero a diferencia de este no se puede reprogramar y fue creado para una tarea en específico; consiguiendo así un mayor rendimiento y eficiencia en dicha tarea. Un ejemplo de ASIC es el procesador de minería de Bitcoin, que se utiliza específicamente para realizar los cálculos necesarios en la minería de criptomonedas, logrando un rendimiento y eficiencia superiores en comparación con otros tipos de procesadores.
+### 5. ASIC
+El **ASIC (Application-Specific Integrated Circuit/Circuito Integrado de Aplicación Específica)** es un tipo de circuito integrado diseñado específicamente para realizar una tarea concreta, lo que lo diferencia de los FPGA, que son reprogramables. Al estar optimizado exclusivamente para su propósito, los ASICs ofrecen un rendimiento y eficiencia superiores en comparación con otros tipos de procesadores. Un ejemplo destacado de ASIC es el procesador de minería de Bitcoin, diseñado exclusivamente para realizar los cálculos intensivos necesarios en la minería de criptomonedas, logrando una eficiencia energética y un rendimiento significativamente mayores que los procesadores de propósito general.
 
-### 6.DSP
 ### 6. DSP
-El **DSP (Digital Signal Processor/ Procesador de señales digitales)** es una CPU diseñada para procesar señales de audio y video principalmente, se utiliza para aplicaciones que requieran un procesamiento de las señales de alta velocidad. Un ejemplo de DSP es el Texas Instruments TMS320C6000, que se utiliza en aplicaciones como procesamiento de audio en tiempo real, comunicaciones digitales y sistemas de radar.
+El **DSP (Digital Signal Processor/Procesador de Señales Digitales)** es un tipo de procesador especializado en el procesamiento eficiente de señales digitales, como audio, video y datos provenientes de sensores. Estos procesadores están diseñados para realizar cálculos matemáticos complejos a alta velocidad, lo que los hace ideales para aplicaciones que requieren procesamiento en tiempo real. Un ejemplo destacado de DSP es el Texas Instruments TMS320C6000, ampliamente utilizado en áreas como procesamiento de audio en tiempo real, comunicaciones digitales, sistemas de radar, y dispositivos médicos. Los DSPs también son fundamentales en tecnologías modernas como la cancelación de ruido activa, la compresión de datos multimedia y el análisis de señales en sistemas de monitoreo industrial.
 
 ### 7. ACAP
 EL **ACAP (Adaptative Computing Accelerator Platform/ )** Unidad de procesamiento adaptable creada para tareas de alta exigencia y flexibilidad. Esta formado por: __FPGA + DSP + CPU multicore + cores para Inteligencia Artificial__
@@ -26,7 +25,7 @@ EL **ACAP (Adaptative Computing Accelerator Platform/ )** Unidad de procesamient
 # Conjuntos de Instrucciones
 
 ### ISA
-La **ISA (Instruction Set Architecture)** es una interfaz abstracta entre el hardware y el nivel más bajo del software que incluye toda la información necesaria para escribir un programa en lenguake máquina que se ejecutará correctamente, e incluye las instrucciones, los registros, el acceso a la memoria, la E/S, etc.
+La **ISA (Instruction Set Architecture)** es una interfaz abstracta que define cómo el software interactúa con el hardware. Incluye un conjunto de instrucciones, registros, modos de direccionamiento, acceso a la memoria, entrada/salida (E/S) y otros aspectos esenciales para que un programa en lenguaje máquina se ejecute correctamente en un procesador específico. La ISA actúa como un puente entre el diseño del hardware y el desarrollo de software, proporcionando una base común que permite la compatibilidad y optimización entre ambos. Ejemplos de arquitecturas de conjunto de instrucciones incluyen x86, ARM, RISC-V y MIPS, cada una con características y aplicaciones específicas.
 
 ### CISC
 EL **CISC (Complex Instruction Set Computer)** se trata de una ISA con muchas instrucciones de distinto tamaño y formato, se puede acceder a la memoria desde cualquiera instrucción.
@@ -61,7 +60,6 @@ Los **Benchmarks o tests de rendimiento** son un conjunto de programas que ejecu
 Esta ley nos dice que la posible mejora del rendimiento está limitada por la porción en que se utilice la prestación mejorada. En otras palabras, si solo una parte del sistema se mejora, el impacto total en el rendimiento global estará limitado por la fracción del tiempo que esa parte mejorada es utilizada.
 
 # Tipos de sistemas operativos
-
 
 ## En base al número de usuarios
 
