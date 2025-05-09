@@ -54,13 +54,15 @@ El **repertorio de instrucciones** es el conjunto de palabras que contienen las 
 # Almacenamiento de datos e instrucciones
 
 ### Registros de procesador
-Los **registros** son un número limitado de posiciones especiales en las que se sitúan las instrucciones aritméticas.
+Los **registros** son pequeñas unidades de almacenamiento dentro del procesador que se utilizan para guardar temporalmente datos e instrucciones. Son extremadamente rápidos y permiten a la CPU acceder a la información de manera eficiente durante la ejecución de operaciones aritméticas y lógicas.
 
 ### Memoria caché
-La **memoria caché** es una memoria rápida y pequeña que actúa como un *búfer*(espacio de memoria en el que se almacenan datos de manera temporal) para otra memoria mayor y más lenta.
+La **memoria caché** es una memoria rápida y pequeña que actúa como un *búfer* (espacio de memoria en el que se almacenan datos de manera temporal) para otra memoria mayor y más lenta.
 
-## Memoria principal
-La **memoria principal** es la memoria volátil (que solo guarda los datos cuando está recibiendo señal eléctrica) que se usa para almacenar los programas cuando se están ejecutando; típicamente se compone de DRAM (memoria construida como un circuito integrado, que provee acceso aleatorio a cualquier posición) en los computadores actuales
+### Memoria principal
+La **memoria principal** se usa para almacenar los programas cuando se están ejecutando; típicamente se compone de DRAM (memoria construida como un circuito integrado, que provee acceso aleatorio a cualquier posición) en los computadores actuales. 
+
+Los registros, la memoria caché y la memoria principal usan distinta tecnología pero son todas tipos de memoria volátil.
 
 ### Memoria secundaria
 La **memoria secundaria** es una memoria no volátil (forma de memoria que guarda los datos incluso en ausencia de alimentación eléctrica y que se usa para almacenar los programas entre ejecuciones) usada para almacenar los programas y datos entre ejecuciones; típicamente se compone de disicos magnéticos en los computadores actuales.
@@ -86,7 +88,7 @@ La **Red de ára local** es una red diseñada para transportar datos en un área
 
 ### Comunicación y conexión entre procesadores
 
-# Arquitectura de computadores
+# Grandes indeas en Arquitectura de Computadores
 
 ### Ley de Moore
 La **Ley de Moore** es una observación empírica que indica que el número de transistores en un circuito integrado tiende a duplicarse aproximadamente cada dos años. Esta tendencia ha impulsado el avance tecnológico en la industria de los computadores durante décadas.
