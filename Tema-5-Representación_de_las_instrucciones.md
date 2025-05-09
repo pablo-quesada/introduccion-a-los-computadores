@@ -4,7 +4,7 @@
 El **repertorio de instrucciones** es el vocabulario de comandos entendidos por una arquitectura concreta.
 
 ### Palabra
-Una **palabra** es la unidad natural de acceso en un computador; normalmente un grupo de 32 bits; corresponde al tamaño de un registro en la arquitectura MIPS.
+Una **palabra** es la unidad natural de acceso en un computador; normalmente un grupo de 32 bits, equivalente a 4 bytes. En la arquitectura MIPS, una palabra corresponde al tamaño de un registro, y cada byte representa 8 bits.
 
 ### Registros
 Los **registros** son las posiciones especiales construídas en hardware. Son limitados, en la arquitectura MIPS son de 32 bits.
@@ -16,13 +16,10 @@ Las **instrucciones aritméticas** son comandos encargados de realizar operacion
 Las **instrucciones de datos** son comandos que mueven datos entre memoria y registros.
 
 ### Dirección
-La **dirección** es valor usado para señalar la posición de un elemento de datos específico dentro de una memoria.
+La **dirección** es un valor que identifica la ubicación específica de un dato dentro de la memoria. Es esencial para acceder y manipular información almacenada en un sistema informático.
 
 ### Restricción de alineamiento
-La **restricción de alineamiento** es el requisito de que los datos se alineen en memoria en límites naturales. En la arquitectura MIPS las direcciones deben ser múltiplos de 4.
-
-### Array
-Los **arrays** son estructuras de datos más complejas que las variables simples. (Similares a las listas en python, pero cuando se llama a una posición de memoria en un array se debe recordar que por la restricción de alineamiento son múltiplos de 4, siendo la primera el 0 y la segunda 4).
+La **restricción de alineamiento** es una regla que exige que los datos se almacenen en direcciones de memoria que sean múltiplos de su tamaño natural. En la arquitectura MIPS, por ejemplo, las direcciones deben ser múltiplos de 4 para garantizar un acceso eficiente y correcto.
 
 ### Big Endian
 Opción en la numeración de una palabra en la que el byte más a la derecha es el primero en la palabra.
@@ -36,60 +33,30 @@ El **formato de instrucción** es una forma de representación de una instrucci�
 ### Lenguaje máquina
 El **lenguaje máquina** es la  representación binaria de las instrucciones usada para la comunicación dentro de un sistema informático.
 
-### add
-Instrucción de suma entre dos registros que indica el operando destino.
+## Algunas instrucciones en ensamblador
 
-### subtract
-Instrucción de resta entre dos registros que indica el operando destino.
+- `add`: Instrucción de suma entre dos registros que indica el operando destino.
+- `subtract`: Instrucción de resta entre dos registros que indica el operando destino.
+- `load word`: Instrucción que carga una palabra de la memoria a un registro. Instrucción de transferencia de datos.
+- `store word`: Instrucción que guarda una palabra del registro en la memoria. Instrucción de transferencia de datos.
+- `li`: Instrucción que carga en un registro una constante. También sirve para preparar llamadas al sistema. Instrucción de transferencia de datos.
+- `la`: Instrucción que carga el contenido de las posiciones de memoria de una palabra. Instrucción de transferencia de datos.
+- `syscall`: Instrucción encargada de llamar al sistema. Se trata de una interrupción. Las interrupciones son un mecanismo para recuperar el control de la CPU y atender otras solicitudes (procesos).
+- `beq`: Instrucción que realiza un salto condicionado a un operando destino o etiqueta si dos operandos son iguales.
+- `bne`: Instrucción que realiza un salto condicionado a un operando destino o etiqueta si dos operandos no son iguales.
+- `j`: Instrucción de salto incondicional a un operando destino o etiqueta.
+- `sll`: Instrucción encargada de desplazar un cierto número de bits un operando a la izquierda. Se puede emplear como instrucción para multiplicar. (Recordar que el número que pongamos se multiplicará por 4, y ese será el desplazamiento).
 
-### load word
-Instrucción que carga una palabra de la memoria a un registro. Instrucción de transferencia de datos.
 
-### store word
-Instrucción que guarda una palabra del registro en la memoria.Instrucción de transferencia de datos.
+## Campos de una instrucción
+Los **campos** de una instrucción son las partes individuales en las que se divide una instrucción en lenguaje máquina. Cada campo tiene un propósito específico y contiene información necesaria para que el procesador interprete y ejecute la instrucción correctamente. Estos campos incluyen datos como el tipo de operación a realizar, los registros involucrados, las direcciones de memoria, o valores constantes. La estructura y el tamaño de los campos varían según el formato de la instrucción y la arquitectura del procesador.
 
-### li
-Instrucción que carga en un registro una constante. También sirve para preparar llamadas al systema. Instrucción de transferencia de datos.
-
-### la 
-Instrucción que carga el contenido de las posiciones de memoria de una palabra. Instrucción de transferencia de datos.
-
-### syscall
-Instrucción encargada de llamar al sistema. Se trata de una interrupción. Las interrupciones son un mecanismo para recuperar el control de la CPU y atender otras solicitudes (procesos).
-
-### beq
-Instrucción que realiza un salto condicionado a un operando destino o etiqueta si dos operandos son iguales.
-
-### bne
-Instrucción que realiza un salto condicionado a un operando destino o etiqueta si dos operandos no son iguales.
-
-### j
-Instrucción de salto incondicional a un operando destino o etiqueta.
-
-### sll
-Instrucción encargada de desplazar un cierto número de bits un operando a la izquierda. Se puede emplear como instrucción para multiplicar. (Recordar que el número que pongamos se multiplicará por 4, y ese será el desplazamiento)
-
-### Campo
-Los **campos** son segmentos de instrucción.
-
-#### opcode
-El **opcode** es el campo que indica la operación y el formato de una instrucción.
-
-#### rs
-El **rs** es el registro del primer operando fuente.
-
-#### rt
-El **rt** es el registro del segundo operando fuente.
-
-#### rd
-El **rd** es el registro del operando destino, donde se almacena el resultado de la
-operación.
-
-#### shamt
-El **shamt** es la cantidad de desplazamientos (shift amount). 
-
-#### func
-La **func** (función) Sselecciona la variante específica de la operación en el campo op y a veces es llamado código de función.
+- `opcode`: El campo que indica la operación y el formato de una instrucción.
+- `rs`: El registro del primer operando fuente.
+- `rt`: El registro del segundo operando fuente.
+- `rd`: El registro del operando destino, donde se almacena el resultado de la operación.
+- `shamt`: La cantidad de desplazamientos (shift amount).
+- `func`: Selecciona la variante específica de la operación en el campo `op` y a veces es llamado código de función.
 
 ### Instrucciones tipo R
 Las **instrucciones tipo R** son las operaciones aritmético y lógicas. En ellas se reservan seis bits al opcode, 5 al rs, 5 al rt, 5 al rd, 5 al shamt y 6 a funct.
