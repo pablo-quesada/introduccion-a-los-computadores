@@ -59,40 +59,53 @@ Los **campos** de una instrucción son las partes individuales en las que se div
 - `func`: Selecciona la variante específica de la operación en el campo `op` y a veces es llamado código de función.
 
 ### Instrucciones tipo R
-Las **instrucciones tipo R** son las operaciones aritmético y lógicas. En ellas se reservan seis bits al opcode, 5 al rs, 5 al rt, 5 al rd, 5 al shamt y 6 a funct.
+Las **instrucciones tipo R** son aquellas que realizan operaciones aritméticas y lógicas. Estas instrucciones están compuestas por varios campos, cada uno con un propósito específico:
+
+- `opcode`: 6 bits que indican la operación a realizar.
+- `rs`: 5 bits que especifican el primer registro fuente.
+- `rt`: 5 bits que especifican el segundo registro fuente.
+- `rd`: 5 bits que indican el registro destino donde se almacenará el resultado.
+- `shamt`: 5 bits que representan la cantidad de desplazamientos (shift amount).
+- `funct`: 6 bits que seleccionan la variante específica de la operación definida por el `opcode`.
 
 ### Instrucciones tipo I
-Las **instrucciones tipo I** son las operaciones de transferencia de datos. En ellas se reservan seis bits al opcode, 5 al rs, 5 al rt y 16 a la dirección.
+
+Las **instrucciones tipo I** son aquellas que se utilizan principalmente para operaciones de transferencia de datos y algunas operaciones aritméticas con constantes. Estas instrucciones están estructuradas en varios campos, cada uno con un propósito específico:
+
+- `opcode`: 6 bits que indican la operación a realizar.
+- `rs`: 5 bits que especifican el registro fuente.
+- `rt`: 5 bits que especifican el registro destino.
+- `inmediate`: 16 bits que contienen un valor constante o una dirección de memoria.
+
+Este formato permite realizar operaciones como cargar o almacenar datos entre registros y memoria, así como realizar cálculos con valores inmediatos.
 
 ### Instrucciones tipo J
-Las **Instrucciones tipo J** son las operaciones de salto. En las de salto incondicional se reservan 6 bits para el opcode y 26 para la dirección o etiqueta.
-En las de salto condicional se reservan seis bits al opcode, 5 al rs, 5 al rt y 16 a la dirección.
+
+Las **instrucciones tipo J** son aquellas utilizadas para operaciones de salto sin condiciones. Se reservan 6 bits para el `opcode` y 26 bits para la dirección o etiqueta de destino.
 
 ### Contador de Programas
 El **contador de programas** (PC) es el registro que contiene la dirección de la instrucción que está siendo ejecutada en el programa.
 
-### Modos de direccionamiento
+## Modos de direccionamiento
 
 #### Direccionamiento inmediato
-El **direccionamiento inmediato** se produce cuando el operando es una constante que aparece en la misma instrucción. (Tipo R con constante).
+El **direccionamiento inmediato** se produce cuando el operando es una constante que aparece en la misma instrucción.
 
 #### Direccionamiento a registro
-El **direccionamiento a registro** se produce cuando el operando está en un registro. (Tipo R con variables).
+El **direccionamiento a registro** se produce cuando el operando está en un registro.
 
 #### Direccionamiento base o desplazamiento
-El **direccionamiento base o desplazamiento** se produce cuando el operando está en la posición de memoria cuya dirección es la suma de un registro y de una constante en la instrucción. (Tipo I).
+El **direccionamiento base o desplazamiento** se produce cuando el operando está en la posición de memoria cuya dirección es la suma de un registro y de una constante en la instrucción.
 
 #### Direccionamiento relativo al PC
-El **direccionamiento relativo al PC** se produce cuando la dirección es la suma del PC y de una constante en la instrucción. (Tipo J condicional).
+El **direccionamiento relativo al PC** se produce cuando la dirección es la suma del PC y de una constante en la instrucción.
 
 #### Direccionamiento pseudodirecto
-El **direccionamiento pseudodirecto** se produce cuando la dirección de salto es los 26 bits de la instrucción concatenados con los bits de mayor peso del PC. (Tipo J incondicional).
+El **direccionamiento pseudodirecto** se produce cuando la dirección de salto es los 26 bits de la instrucción concatenados con los bits de mayor peso del PC.
 
-### Text-segment
-El **text-segment** (segmento de texto) contiene el código máquina de un programa.
+## Segmentos de memoria
+El **segmento de memoria** es una división lógica de la memoria de un programa en diferentes áreas, cada una con un propósito específico. Estas divisiones permiten organizar y gestionar eficientemente el código, los datos y las estructuras necesarias para la ejecución del programa. Los segmentos principales incluyen:
 
-### Data-segment
-El **data-segment** (segmento de datos) contiene la representación binaria de los datos inicializados en el programa.
-
-### Stack-segment
-El **stack-segment** (segmento de pila) es el espacio para manejar procedimientos.
+- `Text-segment`: (segmento de texto) contiene el código máquina de un programa.
+- `Data-segment`: (segmento de datos) contiene la representación binaria de los datos inicializados en el programa. 
+- `Stack-segment`: (segmento de pila) es el espacio para manejar procedimientos. Maneja las llamadas a procedimientos y el almacenamiento temporal de datos.
