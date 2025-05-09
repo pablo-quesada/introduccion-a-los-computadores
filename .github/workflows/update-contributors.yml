@@ -1,0 +1,42 @@
+name: Update Contributors List
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Get list of contributors
+      run: |
+        git log --pretty="%an <%ae>" | sort | uniq > contributors_list.txt
+
+    - name: Update CONTRIBUTORS.md
+      run: |
+        echo "# Contribuyendo a la Asignatura 🚀" > CONTRIBUTORS.md
+        echo "" >> CONTRIBUTORS.md
+        while IFS= read -r contributor; do
+          echo "- $contributor" >> CONTRIBUTORS.md
+        done < contributors_list.txt
+
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Commit and push changes
+      run: |
+        git add CONTRIBUTORS.md
+        git commit -m "docs: update CONTRIBUTORS.md [skip ci]"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
