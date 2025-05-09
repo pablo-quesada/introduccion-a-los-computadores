@@ -1,3 +1,6 @@
 # Contribuyendo a la Asignatura 🚀
 
-- Pablo Quesada <60692899+pablo-quesada@users.noreply.github.com>
+
+- Diego Olañeta Suárez (@diegoolaneta)
+- José Vicente Mollinedo Figueroa (@josevicentemollinedo)
+- Pablo Quesada (@pablo-quesada)
